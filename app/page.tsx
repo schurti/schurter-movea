@@ -1,6 +1,7 @@
 import { ButtonLink, PlainButtonLink } from '@/components/elements/button'
 import { Link } from '@/components/elements/link'
 import { Main } from '@/components/elements/main'
+import { ObfuscatedEmailLink } from '@/components/elements/obfuscated-email-link'
 import { Screenshot } from '@/components/elements/screenshot'
 import { ChevronIcon } from '@/components/icons/chevron-icon'
 import { CallToActionSimple } from '@/components/sections/call-to-action-simple'
@@ -234,9 +235,7 @@ export default function Page() {
           }
           cta={
             <div className="flex items-center gap-4">
-              <ButtonLink href="mailto:info@schurter-movea.ch" size="lg">
-                Kontakt aufnehmen
-              </ButtonLink>
+              <ObfuscatedEmailLink label="Kontakt aufnehmen" size="lg" />
 
               <PlainButtonLink href="tel:+41" size="lg">
                 Anrufen <ChevronIcon />
@@ -258,7 +257,7 @@ export default function Page() {
           </>
         }
         socialLinks={<></>}
-        fineprint="© 2025 Schurter MOVEA GmbH"
+        fineprint={`© ${new Date().getFullYear()} Schurter MOVEA GmbH`}
       />
     </>
   )
