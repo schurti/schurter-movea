@@ -27,9 +27,7 @@ export default function Page() {
         id="navbar"
         logo={
           <NavbarLogo href="#">
-            <span className="text-2xl font-bold text-mist-950 dark:text-white">
-              Schurter MOVEA
-            </span>
+            <img src="/schurter-movea-logo.svg" alt="Schurter MOVEA" className="h-12 w-auto dark:invert lg:h-14" />
           </NavbarLogo>
         }
         links={
