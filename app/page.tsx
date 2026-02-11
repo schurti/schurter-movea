@@ -21,13 +21,13 @@ import { HeroCenteredWithDemo } from '@/components/sections/hero-centered-with-d
 import {
   NavbarLink,
   NavbarLogo,
-  NavbarWithLinksActionsAndCenteredLogo,
-} from '@/components/sections/navbar-with-links-actions-and-centered-logo'
+  NavbarWithLogoActionsAndLeftAlignedLinks,
+} from '@/components/sections/navbar-with-logo-actions-and-left-aligned-links'
 
 export default function Page() {
   return (
     <>
-      <NavbarWithLinksActionsAndCenteredLogo
+      <NavbarWithLogoActionsAndLeftAlignedLinks
         id="navbar"
         logo={
           <NavbarLogo href="#home">
