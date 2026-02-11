@@ -1,8 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
-
-import { ButtonLink } from '@/components/elements/button'
+import { Button } from '@/components/elements/button'
 
 type ObfuscatedEmailLinkProps = {
   label: string
@@ -10,27 +8,22 @@ type ObfuscatedEmailLinkProps = {
   className?: string
 }
 
+const userParts = ['in', 'fo'] as const
+const domainParts = ['schurter', 'movea', 'ch'] as const
+
+function openMailto() {
+  const email = `${userParts.join('')}@${domainParts[0]}${domainParts[1]}.${domainParts[2]}`
+  window.location.href = `mailto:${email}`
+}
+
 export function ObfuscatedEmailLink({
   label,
   size = 'md',
   className,
 }: ObfuscatedEmailLinkProps) {
-  const [href, setHref] = useState<string | null>(null)
-
-  useEffect(() => {
-    const user = 'info'
-    const domain = 'schurter-movea.ch'
-    setHref(`mailto:${user}@${domain}`)
-  }, [])
-
   return (
-    <ButtonLink
-      href={href ?? '#'}
-      size={size}
-      className={className}
-      aria-disabled={!href}
-    >
+    <Button type="button" size={size} className={className} onClick={openMailto}>
       {label}
-    </ButtonLink>
+    </Button>
   )
 }
