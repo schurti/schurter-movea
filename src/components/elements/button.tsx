@@ -1,5 +1,6 @@
 import { clsx } from 'clsx/lite'
 import type { ComponentProps } from 'react'
+import { withBasePath } from '@/lib/with-base-path'
 
 const sizes = {
   md: 'px-3 py-1',
@@ -45,7 +46,7 @@ export function ButtonLink({
 } & Omit<ComponentProps<'a'>, 'href'>) {
   return (
     <a
-      href={href}
+      href={withBasePath(href)}
       className={clsx(
         'inline-flex shrink-0 items-center justify-center gap-1 rounded-full text-sm/7 font-medium',
         color === 'dark/light' &&
@@ -91,7 +92,7 @@ export function SoftButtonLink({
 } & Omit<ComponentProps<'a'>, 'href'>) {
   return (
     <a
-      href={href}
+      href={withBasePath(href)}
       className={clsx(
         'inline-flex shrink-0 items-center justify-center gap-1 rounded-full bg-mist-950/10 text-sm/7 font-medium text-mist-950 hover:bg-mist-950/15 dark:bg-white/10 dark:text-white dark:hover:bg-white/20',
         sizes[size],
@@ -140,7 +141,7 @@ export function PlainButtonLink({
 } & Omit<ComponentProps<'a'>, 'href'>) {
   return (
     <a
-      href={href}
+      href={withBasePath(href)}
       className={clsx(
         'inline-flex shrink-0 items-center justify-center gap-2 rounded-full text-sm/7 font-medium',
         color === 'dark/light' && 'text-mist-950 hover:bg-mist-950/10 dark:text-white dark:hover:bg-white/10',

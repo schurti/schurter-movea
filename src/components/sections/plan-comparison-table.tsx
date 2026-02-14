@@ -5,6 +5,13 @@ import { Container } from '../elements/container'
 import { CheckmarkIcon } from '../icons/checkmark-icon'
 import { MinusIcon } from '../icons/minus-icon'
 
+function isPlanValueMap<Plan extends string>(
+  value: ReactNode | Record<Plan, ReactNode>,
+  plan: Plan,
+): value is Record<Plan, ReactNode> {
+  return typeof value === 'object' && value !== null && plan in value
+}
+
 function FeatureGroup<Plan extends string>({
   group,
   plans,
@@ -35,10 +42,7 @@ function FeatureGroup<Plan extends string>({
             {feature.name}
           </th>
           {plans.map((plan) => {
-            const value = ((value: any): value is Record<Plan, ReactNode> =>
-              typeof value === 'object' && value !== null && plan in value)(feature.value)
-              ? feature.value[plan]
-              : feature.value
+            const value = isPlanValueMap(feature.value, plan) ? feature.value[plan] : feature.value
 
             return (
               <td

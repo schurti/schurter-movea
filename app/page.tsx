@@ -23,6 +23,8 @@ import {
   NavbarLogo,
   NavbarWithLogoActionsAndLeftAlignedLinks,
 } from '@/components/sections/navbar-with-logo-actions-and-left-aligned-links'
+import { withBasePath } from '@/lib/with-base-path'
+import Image from 'next/image'
 
 export default function Page() {
   return (
@@ -31,7 +33,13 @@ export default function Page() {
         id="navbar"
         logo={
           <NavbarLogo href="#home">
-            <img src="/schurter-movea-logo.svg" alt="Schurter MOVEA" className="h-12 w-auto dark:invert lg:h-14" />
+            <Image
+              src={withBasePath('/schurter-movea-logo.svg')}
+              alt="Schurter MOVEA"
+              width={280}
+              height={64}
+              className="h-12 w-auto dark:invert lg:h-14"
+            />
           </NavbarLogo>
         }
         links={
@@ -69,14 +77,14 @@ export default function Page() {
           }
           demo={
             <Screenshot className="rounded-lg" wallpaper="blue" placement="bottom">
-              <img
+              <Image
                 className="dark:hidden"
                 src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=3440&h=1990&fit=crop&q=80"
                 alt="Modern train station with public transportation"
                 width={3440}
                 height={1990}
               />
-              <img
+              <Image
                 className="not-dark:hidden"
                 src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=3440&h=1990&fit=crop&q=80"
                 alt="Modern train station with public transportation"
@@ -115,14 +123,14 @@ export default function Page() {
                 }
                 demo={
                   <Screenshot wallpaper="blue" placement="bottom-right">
-                    <img
+                    <Image
                       src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1500&h=1240&fit=crop&q=80"
                       alt="Highway infrastructure and transportation network"
                       className="bg-white/75 dark:hidden"
                       width={1500}
                       height={1240}
                     />
-                    <img
+                    <Image
                       width={1500}
                       height={1240}
                       src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1500&h=1240&fit=crop&q=80"
@@ -148,14 +156,14 @@ export default function Page() {
                 }
                 demo={
                   <Screenshot wallpaper="purple" placement="top-left">
-                    <img
+                    <Image
                       src="https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?w=1500&h=1240&fit=crop&q=80"
                       alt="Urban public transit and city mobility"
                       className="bg-white/75 dark:hidden"
                       width={1500}
                       height={1240}
                     />
-                    <img
+                    <Image
                       src="https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?w=1500&h=1240&fit=crop&q=80"
                       width={1500}
                       height={1240}
@@ -181,14 +189,14 @@ export default function Page() {
                 }
                 demo={
                   <Screenshot wallpaper="brown" placement="bottom-left">
-                    <img
+                    <Image
                       src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1500&h=1240&fit=crop&q=80"
                       alt="Business consulting and management"
                       className="bg-white/75 dark:hidden"
                       width={1500}
                       height={1240}
                     />
-                    <img
+                    <Image
                       src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1500&h=1240&fit=crop&q=80"
                       alt="Business consulting and management"
                       width={1500}
@@ -214,14 +222,14 @@ export default function Page() {
                 }
                 demo={
                   <Screenshot wallpaper="blue" placement="top-right">
-                    <img
+                    <Image
                       src="https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?w=1500&h=1240&fit=crop&q=80"
                       alt="Urban public transit and city mobility"
                       className="bg-white/75 dark:hidden"
                       width={1500}
                       height={1240}
                     />
-                    <img
+                    <Image
                       src="https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?w=1500&h=1240&fit=crop&q=80"
                       width={1500}
                       height={1240}

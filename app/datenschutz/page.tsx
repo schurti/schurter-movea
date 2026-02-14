@@ -1,10 +1,12 @@
 import { Main } from '@/components/elements/main'
 import { ObfuscatedEmailTextLink, ObfuscatedPhoneTextLink } from '@/components/elements/obfuscated-contact'
+import Image from 'next/image'
 import NextLink from 'next/link'
 import {
   FooterLink,
   FooterWithLinksAndSocialIcons,
 } from '@/components/sections/footer-with-links-and-social-icons'
+import { withBasePath } from '@/lib/with-base-path'
 
 export default function DatenschutzPage() {
   return (
@@ -13,7 +15,13 @@ export default function DatenschutzPage() {
         <nav>
           <div className="mx-auto flex h-21 max-w-7xl items-center px-6 lg:px-10">
             <NextLink href="/" className="inline-flex items-stretch">
-              <img src="/schurter-movea-logo.svg" alt="Schurter MOVEA" className="h-12 w-auto dark:invert lg:h-14" />
+              <Image
+                src={withBasePath('/schurter-movea-logo.svg')}
+                alt="Schurter MOVEA"
+                width={280}
+                height={64}
+                className="h-12 w-auto dark:invert lg:h-14"
+              />
             </NextLink>
           </div>
         </nav>

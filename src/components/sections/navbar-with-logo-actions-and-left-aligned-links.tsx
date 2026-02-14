@@ -1,6 +1,7 @@
 import { ElDialog, ElDialogPanel } from '@tailwindplus/elements/react'
 import { clsx } from 'clsx/lite'
 import type { ComponentProps, ReactNode } from 'react'
+import { withBasePath } from '@/lib/with-base-path'
 
 export function NavbarLink({
   children,
@@ -10,7 +11,7 @@ export function NavbarLink({
 }: { href: string } & Omit<ComponentProps<'a'>, 'href'>) {
   return (
     <a
-      href={href}
+      href={withBasePath(href)}
       className={clsx(
         'group inline-flex items-center justify-between gap-2 text-3xl/10 font-medium text-mist-950 lg:text-sm/7 dark:text-white',
         className,
@@ -28,7 +29,7 @@ export function NavbarLink({
 }
 
 export function NavbarLogo({ className, href, ...props }: { href: string } & Omit<ComponentProps<'a'>, 'href'>) {
-  return <a href={href} {...props} className={clsx('inline-flex items-stretch', className)} />
+  return <a href={withBasePath(href)} {...props} className={clsx('inline-flex items-stretch', className)} />
 }
 
 export function NavbarWithLogoActionsAndLeftAlignedLinks({
