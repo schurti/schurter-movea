@@ -1,6 +1,8 @@
+'use client'
+
 import { ElDialog, ElDialogPanel } from '@tailwindplus/elements/react'
 import { clsx } from 'clsx/lite'
-import type { ComponentProps, ReactNode } from 'react'
+import type { ComponentProps, MouseEvent, ReactNode } from 'react'
 import { withBasePath } from '@/lib/with-base-path'
 
 export function NavbarLink({
@@ -43,6 +45,16 @@ export function NavbarWithLogoActionsAndLeftAlignedLinks({
   links: ReactNode
   actions: ReactNode
 } & ComponentProps<'header'>) {
+  const closeMenuOnLinkTap = (event: MouseEvent<HTMLDialogElement>) => {
+    const target = event.target as HTMLElement
+    if (!target.closest('a[href]')) return
+
+    const dialog = target.closest('dialog')
+    if (dialog instanceof HTMLDialogElement) {
+      dialog.close()
+    }
+  }
+
   return (
     <header className={clsx('sticky top-0 z-10 bg-mist-100 dark:bg-mist-950', className)} {...props}>
       <style>{`:root { --scroll-padding-top: 5.25rem }`}</style>
@@ -73,7 +85,7 @@ export function NavbarWithLogoActionsAndLeftAlignedLinks({
         </div>
 
         <ElDialog className="lg:hidden">
-          <dialog id="mobile-menu" className="backdrop:bg-transparent">
+          <dialog id="mobile-menu" onClickCapture={closeMenuOnLinkTap} className="backdrop:bg-transparent">
             <ElDialogPanel className="fixed inset-0 bg-mist-100 px-6 py-6 lg:px-10 dark:bg-mist-950">
               <div className="flex justify-end">
                 <button
