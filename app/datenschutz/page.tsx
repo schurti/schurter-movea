@@ -1,41 +1,26 @@
 import { Main } from '@/components/elements/main'
 import { ObfuscatedEmailTextLink, ObfuscatedPhoneTextLink } from '@/components/elements/obfuscated-contact'
-import Image from 'next/image'
-import NextLink from 'next/link'
-import {
-  FooterLink,
-  FooterWithLinksAndSocialIcons,
-} from '@/components/sections/footer-with-links-and-social-icons'
-import { withBasePath } from '@/lib/with-base-path'
+import { DocumentCentered } from '@/components/sections/document-centered'
+import { SiteFooter } from '@/components/sections/site-footer'
+import { SiteHeader } from '@/components/sections/site-header'
 
 export default function DatenschutzPage() {
   return (
     <>
-      <header className="sticky top-0 z-10 bg-mist-100 dark:bg-mist-950">
-        <nav>
-          <div className="mx-auto flex h-21 max-w-7xl items-center px-6 lg:px-10">
-            <NextLink href="/" className="inline-flex items-stretch">
-              <Image
-                src={withBasePath('/schurter-movea-logo.svg')}
-                alt="Schurter MOVEA"
-                width={280}
-                height={64}
-                className="h-12 w-auto dark:invert lg:h-14"
-              />
-            </NextLink>
-          </div>
-        </nav>
-      </header>
+      <SiteHeader />
 
       <Main>
-        <section className="py-16 sm:py-24">
-          <div className="mx-auto max-w-4xl px-6 lg:px-8">
-            <h1 className="text-3xl font-bold tracking-tight text-mist-950 dark:text-white sm:text-4xl">
-              Datenschutzerklärung
-            </h1>
-            <p className="mt-4 text-mist-600 dark:text-mist-400">Schurter MOVEA GmbH | Version vom 02.2026</p>
-
-            <div className="mt-8 space-y-6 text-base leading-7 text-mist-700 dark:text-mist-300">
+        <DocumentCentered
+          id="document"
+          headline={
+            <>
+              Daten<wbr />
+              schutz<wbr />
+              erklärung
+            </>
+          }
+          subheadline={<p>Schurter MOVEA GmbH | Version vom 02.2026</p>}
+        >
               <p>
                 In dieser Datenschutzerklärung erläutern wir, die Schurter MOVEA GmbH, wie wir Personendaten erheben
                 und bearbeiten. Sie ist keine abschliessende Beschreibung; allenfalls regeln andere
@@ -55,7 +40,7 @@ export default function DatenschutzPage() {
                 dies dürfen und wenn diese Personendaten korrekt sind.
               </p>
 
-              <h2 className="text-xl font-semibold text-mist-950 dark:text-white">1. Verantwortlicher</h2>
+              <h2>1. Verantwortlicher</h2>
               <p>
                 Verantwortlich für die Datenbearbeitungen, die wir hier beschreiben, ist Schurter MOVEA GmbH,
                 Mattenbachstrasse 28, 8400 Winterthur, Schweiz, soweit im Einzelfall nichts anderes angegeben ist.
@@ -66,7 +51,7 @@ export default function DatenschutzPage() {
                 .
               </p>
 
-              <h2 className="text-xl font-semibold text-mist-950 dark:text-white">
+              <h2>
                 2. Erhebung und Bearbeitung von Personendaten
               </h2>
               <p>
@@ -85,7 +70,7 @@ export default function DatenschutzPage() {
                 Zeit des Besuchs, abgerufene Inhalte, Standortangaben).
               </p>
 
-              <h2 className="text-xl font-semibold text-mist-950 dark:text-white">
+              <h2>
                 3. Zwecke der Datenbearbeitung und Rechtsgrundlagen
               </h2>
               <p>
@@ -110,7 +95,7 @@ export default function DatenschutzPage() {
                 was jedoch keine Auswirkung auf bereits erfolgte Datenbearbeitungen hat.
               </p>
 
-              <h2 className="text-xl font-semibold text-mist-950 dark:text-white">
+              <h2>
                 4. Cookies / Tracking und andere Technologien
               </h2>
               <p>
@@ -136,7 +121,7 @@ export default function DatenschutzPage() {
                 Veröffentlichung nicht einverstanden sind, können sie sich bei uns melden.
               </p>
 
-              <h2 className="text-xl font-semibold text-mist-950 dark:text-white">
+              <h2>
                 5. Datenweitergabe und Datenübermittlung ins Ausland
               </h2>
               <p>
@@ -150,7 +135,7 @@ export default function DatenschutzPage() {
                 ihn vertraglich zur Einhaltung des anwendbaren Datenschutzes, soweit keine gesetzliche Ausnahme greift.
               </p>
 
-              <h2 className="text-xl font-semibold text-mist-950 dark:text-white">
+              <h2>
                 6. Dauer der Aufbewahrung von Personendaten
               </h2>
               <p>
@@ -160,13 +145,13 @@ export default function DatenschutzPage() {
                 gelöscht oder anonymisiert.
               </p>
 
-              <h2 className="text-xl font-semibold text-mist-950 dark:text-white">7. Datensicherheit</h2>
+              <h2>7. Datensicherheit</h2>
               <p>
                 Wir treffen angemessene technische und organisatorische Sicherheitsvorkehrungen zum Schutz Ihrer
                 Personendaten vor unberechtigtem Zugriff und Missbrauch.
               </p>
 
-              <h2 className="text-xl font-semibold text-mist-950 dark:text-white">
+              <h2>
                 8. Pflicht zur Bereitstellung von Personendaten
               </h2>
               <p>
@@ -176,7 +161,7 @@ export default function DatenschutzPage() {
                 schliessen oder abzuwickeln.
               </p>
 
-              <h2 className="text-xl font-semibold text-mist-950 dark:text-white">
+              <h2>
                 9. Profiling und automatisierte Entscheidfindung
               </h2>
               <p>
@@ -185,7 +170,7 @@ export default function DatenschutzPage() {
                 einsetzen, informieren wir Sie entsprechend den gesetzlichen Vorgaben.
               </p>
 
-              <h2 className="text-xl font-semibold text-mist-950 dark:text-white">
+              <h2>
                 10. Anwendbarkeit des Datenschutzrechts
               </h2>
               <p>
@@ -194,7 +179,7 @@ export default function DatenschutzPage() {
                 ausgelegt. Ob und inwieweit diese Gesetze anwendbar sind, hängt vom Einzelfall ab.
               </p>
 
-              <h2 className="text-xl font-semibold text-mist-950 dark:text-white">
+              <h2>
                 11. Rechte der betroffenen Person
               </h2>
               <p>
@@ -209,28 +194,15 @@ export default function DatenschutzPage() {
                 Eidgenössische Datenschutz- und Öffentlichkeitsbeauftragte.
               </p>
 
-              <h2 className="text-xl font-semibold text-mist-950 dark:text-white">12. Änderungen</h2>
+              <h2>12. Änderungen</h2>
               <p>
                 Wir können diese Datenschutzerklärung jederzeit ohne Vorankündigung anpassen. Es gilt die jeweils
                 aktuelle, auf unserer Website publizierte Fassung.
               </p>
-            </div>
-          </div>
-        </section>
+        </DocumentCentered>
       </Main>
 
-      <FooterWithLinksAndSocialIcons
-        id="footer"
-        links={
-          <>
-            <FooterLink href="/">Home</FooterLink>
-            <FooterLink href="/datenschutz">Datenschutz</FooterLink>
-            <FooterLink href="/impressum">Impressum</FooterLink>
-          </>
-        }
-        socialLinks={<></>}
-        fineprint="Schurter MOVEA GmbH - Mattenbachstrasse 28 - CH-8400 Winterthur | Alle Rechte vorbehalten 2026"
-      />
+      <SiteFooter />
     </>
   )
 }

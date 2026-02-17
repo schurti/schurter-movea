@@ -1,35 +1,16 @@
 import { Main } from '@/components/elements/main'
 import { ObfuscatedEmailTextLink, ObfuscatedPhoneTextLink } from '@/components/elements/obfuscated-contact'
-import Image from 'next/image'
-import NextLink from 'next/link'
-import {
-  FooterLink,
-  FooterWithLinksAndSocialIcons,
-} from '@/components/sections/footer-with-links-and-social-icons'
-import { withBasePath } from '@/lib/with-base-path'
+import { SiteFooter } from '@/components/sections/site-footer'
+import { SiteHeader } from '@/components/sections/site-header'
 
 export default function ImpressumPage() {
   return (
     <>
-      <header className="sticky top-0 z-10 bg-mist-100 dark:bg-mist-950">
-        <nav>
-          <div className="mx-auto flex h-21 max-w-7xl items-center px-6 lg:px-10">
-            <NextLink href="/" className="inline-flex items-stretch">
-              <Image
-                src={withBasePath('/schurter-movea-logo.svg')}
-                alt="Schurter MOVEA"
-                width={280}
-                height={64}
-                className="h-12 w-auto dark:invert lg:h-14"
-              />
-            </NextLink>
-          </div>
-        </nav>
-      </header>
+      <SiteHeader />
 
       <Main>
         <section className="py-16 sm:py-24">
-          <div className="mx-auto max-w-4xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl px-6 lg:px-8">
             <h1 className="text-3xl font-bold tracking-tight text-mist-950 dark:text-white sm:text-4xl">Impressum</h1>
 
             <div className="mt-8 space-y-8 text-base leading-7 text-mist-700 dark:text-mist-300">
@@ -95,18 +76,7 @@ export default function ImpressumPage() {
         </section>
       </Main>
 
-      <FooterWithLinksAndSocialIcons
-        id="footer"
-        links={
-          <>
-            <FooterLink href="/">Home</FooterLink>
-            <FooterLink href="/datenschutz">Datenschutz</FooterLink>
-            <FooterLink href="/impressum">Impressum</FooterLink>
-          </>
-        }
-        socialLinks={<></>}
-        fineprint="Schurter MOVEA GmbH - Mattenbachstrasse 28 - CH-8400 Winterthur | Alle Rechte vorbehalten 2026"
-      />
+      <SiteFooter />
     </>
   )
 }

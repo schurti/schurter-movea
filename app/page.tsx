@@ -13,47 +13,15 @@ import {
   Feature,
   FeaturesStackedAlternatingWithDemos,
 } from '@/components/sections/features-stacked-alternating-with-demos'
-import {
-  FooterLink,
-  FooterWithLinksAndSocialIcons,
-} from '@/components/sections/footer-with-links-and-social-icons'
+import { SiteFooter } from '@/components/sections/site-footer'
 import { HeroCenteredWithDemo } from '@/components/sections/hero-centered-with-demo'
-import {
-  NavbarLink,
-  NavbarLogo,
-  NavbarWithLogoActionsAndLeftAlignedLinks,
-} from '@/components/sections/navbar-with-logo-actions-and-left-aligned-links'
-import { withBasePath } from '@/lib/with-base-path'
+import { SiteHeader } from '@/components/sections/site-header'
 import Image from 'next/image'
 
 export default function Page() {
   return (
     <>
-      <NavbarWithLogoActionsAndLeftAlignedLinks
-        id="navbar"
-        logo={
-          <NavbarLogo href="#home">
-            <Image
-              src={withBasePath('/schurter-movea-logo.svg')}
-              alt="Schurter MOVEA"
-              width={280}
-              height={64}
-              className="h-12 w-auto dark:invert lg:h-14"
-            />
-          </NavbarLogo>
-        }
-        links={
-          <>
-            <NavbarLink href="#dienstleistungen">Dienstleistungen</NavbarLink>
-            <NavbarLink href="#ueber-movea">Über MOVEA</NavbarLink>
-          </>
-        }
-        actions={
-          <>
-            <ButtonLink href="#kontakt">Jetzt anfragen</ButtonLink>
-          </>
-        }
-      />
+      <SiteHeader />
 
       <Main>
         <HeroCenteredWithDemo
@@ -62,7 +30,10 @@ export default function Page() {
           subheadline={
             <div className="space-y-3">
               <p className="font-semibold text-mist-700 dark:text-mist-300">Schurter MOVEA GmbH</p>
-              <p>Beratung - Führungs- und Managementunterstützung - Verwaltungsratsmandat - Mobilitätsentwicklung</p>
+              <p>
+                Ich unterstütze Sie mit Beratung, Führungs- und Managementunterstützung, Verwaltungsratsmandaten und
+                Mobilitätsentwicklung.
+              </p>
             </div>
           }
           cta={
@@ -96,11 +67,14 @@ export default function Page() {
         />
 
         <FeaturesStackedAlternatingWithDemos
-          id="dienstleistungen"
-          headline="Unsere Dienstleistungen"
+          headline={
+            <span id="dienstleistungen" className="scroll-mt-4 block">
+              Unsere Dienstleistungen
+            </span>
+          }
           subheadline={
             <p>
-              Die Dienstleistungen von MOVEA GmbH umfassen die Erbringung von Beratungsdienstleistungen, insbesondere
+              Die Dienstleistungen von Schurter MOVEA GmbH umfassen die Erbringung von Beratungsdienstleistungen, insbesondere
               im Zusammenhang mit Verkehrsanlagen, Mobilitätsfragen von Verkehrsunternehmen und Bestellern von
               öffentlichen Verkehrsleistungen, sowie Führungs- und Managementunterstützung für Verwaltungen,
               Unternehmen und Organisationen. Zusätzlich bietet die Firma die Ausübung von Verwaltungsratsmandaten an.
@@ -118,7 +92,7 @@ export default function Page() {
                 }
                 cta={
                   <Link href="#kontakt">
-                    Mehr erfahren <ChevronIcon />
+                    Jetzt anfragen <ChevronIcon />
                   </Link>
                 }
                 demo={
@@ -151,7 +125,7 @@ export default function Page() {
                 }
                 cta={
                   <Link href="#kontakt">
-                    Mehr erfahren <ChevronIcon />
+                    Jetzt anfragen <ChevronIcon />
                   </Link>
                 }
                 demo={
@@ -184,7 +158,7 @@ export default function Page() {
                 }
                 cta={
                   <Link href="#kontakt">
-                    Mehr erfahren <ChevronIcon />
+                    Jetzt anfragen <ChevronIcon />
                   </Link>
                 }
                 demo={
@@ -211,13 +185,12 @@ export default function Page() {
                 headline="Mobilitätsentwicklung"
                 subheadline={
                   <p>
-                    Entwicklung und Umsetzung von Mobilitätsprojekten. KI-gestützte Analysen können dabei zur
-                    Projektentwicklung eingesetzt werden.
+                    Entwicklung und Umsetzung von Mobilitätsprojekten.
                   </p>
                 }
                 cta={
                   <Link href="#kontakt">
-                    Mehr erfahren <ChevronIcon />
+                    Jetzt anfragen <ChevronIcon />
                   </Link>
                 }
                 demo={
@@ -243,11 +216,16 @@ export default function Page() {
           }
         />
 
-        <section id="ueber-movea" className="py-24 sm:py-32">
+        <section className="py-16 sm:py-20">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-4xl">
-              <h2 className="text-base font-semibold leading-7 text-mist-500 dark:text-mist-300">Über MOVEA</h2>
-              <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+              <h2
+                id="ueber-movea"
+                className="scroll-mt-4 text-base font-semibold leading-7 text-mist-500 dark:text-mist-300"
+              >
+                Über MOVEA
+              </h2>
+              <p className="mt-2 text-3xl font-bold tracking-tight text-balance text-gray-900 dark:text-white sm:text-4xl">
                 Schurter MOVEA GmbH
               </p>
 
@@ -282,11 +260,11 @@ export default function Page() {
           </div>
         </section>
 
-        <section id="taetigkeiten" className="py-24 sm:py-32">
+        <section id="taetigkeiten" className="py-16 sm:py-20">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-4xl">
               <h2 className="text-base font-semibold leading-7 text-mist-500 dark:text-mist-300">Tätigkeiten</h2>
-              <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+              <p className="mt-2 text-3xl font-bold tracking-tight text-balance text-gray-900 dark:text-white sm:text-4xl">
                 Beruflicher Werdegang und Mandate
               </p>
 
@@ -313,25 +291,23 @@ export default function Page() {
                     <li>Auto AG Uri, Verwaltungsrat, seit 2016</li>
                   </ul>
                 </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold text-mist-950 dark:text-white">Referenzen</h3>
+                  <p className="mt-2">Auf Anfrage.</p>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section id="referenzen" className="py-24 sm:py-32">
+        <section className="py-16 sm:py-20">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-4xl">
-              <h2 className="text-base font-semibold leading-7 text-mist-500 dark:text-mist-300">Referenzen</h2>
-              <p className="mt-4 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Auf Anfrage.</p>
-            </div>
-          </div>
-        </section>
-
-        <section id="kontakt" className="py-24 sm:py-32">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto max-w-4xl">
-              <h2 className="text-base font-semibold leading-7 text-mist-500 dark:text-mist-300">Kontakt</h2>
-              <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+              <h2 id="kontakt" className="scroll-mt-4 text-base font-semibold leading-7 text-mist-500 dark:text-mist-300">
+                Kontakt
+              </h2>
+              <p className="mt-2 text-3xl font-bold tracking-tight text-balance text-gray-900 dark:text-white sm:text-4xl">
                 Kontaktieren Sie mich für ein unverbindliches Gespräch über Ihr Bedürfnis
               </p>
 
@@ -369,22 +345,7 @@ export default function Page() {
         </section>
       </Main>
 
-      <FooterWithLinksAndSocialIcons
-        id="footer"
-        links={
-          <>
-            <FooterLink href="#dienstleistungen">Dienstleistungen</FooterLink>
-            <FooterLink href="#ueber-movea">Über MOVEA</FooterLink>
-            <FooterLink href="#taetigkeiten">Tätigkeiten</FooterLink>
-            <FooterLink href="#referenzen">Referenzen</FooterLink>
-            <FooterLink href="#kontakt">Kontakt</FooterLink>
-            <FooterLink href="/datenschutz">Datenschutz</FooterLink>
-            <FooterLink href="/impressum">Impressum</FooterLink>
-          </>
-        }
-        socialLinks={<></>}
-        fineprint="Schurter MOVEA GmbH - Mattenbachstrasse 28 - CH-8400 Winterthur | Alle Rechte vorbehalten 2026"
-      />
+      <SiteFooter />
     </>
   )
 }
