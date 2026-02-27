@@ -16,6 +16,7 @@ import {
 import { SiteFooter } from '@/components/sections/site-footer'
 import { HeroCenteredWithDemo } from '@/components/sections/hero-centered-with-demo'
 import { SiteHeader } from '@/components/sections/site-header'
+import { withBasePath } from '@/lib/with-base-path'
 import Image from 'next/image'
 
 export default function Page() {
@@ -90,7 +91,7 @@ export default function Page() {
                 demo={
                   <Screenshot wallpaper="blue" placement="bottom-right">
                     <Image
-                      src="/verkehrsanlagen.jpg"
+                      src={withBasePath('/verkehrsanlagen.jpg')}
                       alt="Verkehrsanlagen"
                       width={3264}
                       height={2448}
@@ -116,7 +117,7 @@ export default function Page() {
                 demo={
                   <Screenshot wallpaper="purple" placement="top-left">
                     <Image
-                      src="/mobilitaetsfragen.jpg"
+                      src={withBasePath('/mobilitaetsfragen.jpg')}
                       alt="Mobilitätsfragen"
                       width={2448}
                       height={3264}
@@ -142,7 +143,7 @@ export default function Page() {
                 demo={
                   <Screenshot wallpaper="green" placement="bottom-left">
                     <Image
-                      src="/management.jpg"
+                      src={withBasePath('/management.jpg')}
                       alt="Führungs- und Managementunterstützung"
                       width={4032}
                       height={3024}
@@ -167,7 +168,7 @@ export default function Page() {
                 demo={
                   <Screenshot wallpaper="brown" placement="top-right">
                     <Image
-                      src="/mobilitaetsentwicklung.jpg"
+                      src={withBasePath('/mobilitaetsentwicklung.jpg')}
                       alt="Mobilitätsentwicklung"
                       width={1536}
                       height={1024}
@@ -210,7 +211,7 @@ export default function Page() {
                   <p className="mt-3">Werner Schurter, dipl. Ing. ETH/SIA, Verkehrsingenieur SVI</p>
                   <div className="mt-4 w-full overflow-hidden rounded-sm outline -outline-offset-1 outline-black/5 dark:outline-white/5 sm:max-w-xs">
                     <Image
-                      src="/werner-schurter.jpg"
+                      src={withBasePath('/werner-schurter.jpg')}
                       alt="Porträt von Werner Schurter"
                       width={832}
                       height={1216}
