@@ -209,7 +209,7 @@ export default function Page() {
                 <div>
                   <h3 className="text-xl font-semibold text-mist-950 dark:text-white">Geschäftsführer</h3>
                   <p className="mt-3">Werner Schurter, dipl. Ing. ETH/SIA, Verkehrsingenieur SVI</p>
-                  <div className="mt-4 w-full overflow-hidden rounded-sm outline -outline-offset-1 outline-black/5 dark:outline-white/5 sm:max-w-xs">
+                  <div className="mt-4 w-full overflow-hidden rounded-sm outline -outline-offset-1 outline-black/5 dark:outline-white/5 sm:aspect-2/1">
                     <Image
                       src={withBasePath('/werner-schurter.jpg')}
                       alt="Porträt von Werner Schurter"
