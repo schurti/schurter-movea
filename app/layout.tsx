@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "Schurter MOVEA GmbH | Beratung für Verkehr und Mobilität",
   description: "Schurter MOVEA GmbH bietet Beratungsdienstleistungen im Bereich Verkehrsanlagen, Mobilitätsfragen und Führungsunterstützung für Verwaltungen, Unternehmen und Organisationen in der Schweiz.",
   icons: {
-    icon: 'favicon.ico',
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico' },
+    ],
   },
 };
 

@@ -39,7 +39,7 @@ export default function Page() {
           cta={
             <div className="flex items-center gap-4">
               <ButtonLink href="#kontakt" size="lg">
-                Kontaktieren Sie uns
+                Kontaktieren Sie mich
               </ButtonLink>
               <PlainButtonLink href="#dienstleistungen" size="lg">
                 Mehr erfahren <ChevronIcon />
@@ -49,14 +49,6 @@ export default function Page() {
           demo={
             <Screenshot className="rounded-lg" wallpaper="blue" placement="bottom">
               <Image
-                className="dark:hidden"
-                src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=3440&h=1990&fit=crop&q=80"
-                alt="Modern train station with public transportation"
-                width={3440}
-                height={1990}
-              />
-              <Image
-                className="not-dark:hidden"
                 src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=3440&h=1990&fit=crop&q=80"
                 alt="Modern train station with public transportation"
                 width={3440}
@@ -86,7 +78,7 @@ export default function Page() {
                 headline="Verkehrsanlagen"
                 subheadline={
                   <p>
-                    Beratung im Zusammenhang mit Verkehrsanlagen und Infrastrukturprojekten. Wir unterstützen Sie bei
+                    Beratung im Zusammenhang mit Verkehrsanlagen und Infrastrukturprojekten. Ich unterstütze Sie bei
                     Planung, Optimierung und Umsetzung.
                   </p>
                 }
@@ -98,18 +90,11 @@ export default function Page() {
                 demo={
                   <Screenshot wallpaper="blue" placement="bottom-right">
                     <Image
-                      src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1500&h=1240&fit=crop&q=80"
-                      alt="Highway infrastructure and transportation network"
-                      className="bg-white/75 dark:hidden"
-                      width={1500}
-                      height={1240}
-                    />
-                    <Image
-                      width={1500}
-                      height={1240}
-                      src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1500&h=1240&fit=crop&q=80"
-                      alt="Highway infrastructure and transportation network"
-                      className="bg-black/75 not-dark:hidden"
+                      src="/verkehrsanlagen.jpg"
+                      alt="Verkehrsanlagen"
+                      width={3264}
+                      height={2448}
+                      className="object-cover aspect-2/1 lg:aspect-3/2"
                     />
                   </Screenshot>
                 }
@@ -131,18 +116,11 @@ export default function Page() {
                 demo={
                   <Screenshot wallpaper="purple" placement="top-left">
                     <Image
-                      src="https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?w=1500&h=1240&fit=crop&q=80"
-                      alt="Urban public transit and city mobility"
-                      className="bg-white/75 dark:hidden"
-                      width={1500}
-                      height={1240}
-                    />
-                    <Image
-                      src="https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?w=1500&h=1240&fit=crop&q=80"
-                      width={1500}
-                      height={1240}
-                      alt="Urban public transit and city mobility"
-                      className="bg-black/75 not-dark:hidden"
+                      src="/mobilitaetsfragen.jpg"
+                      alt="Mobilitätsfragen"
+                      width={2448}
+                      height={3264}
+                      className="object-cover aspect-2/1 lg:aspect-3/2"
                     />
                   </Screenshot>
                 }
@@ -162,20 +140,13 @@ export default function Page() {
                   </Link>
                 }
                 demo={
-                  <Screenshot wallpaper="brown" placement="bottom-left">
+                  <Screenshot wallpaper="green" placement="bottom-left">
                     <Image
-                      src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1500&h=1240&fit=crop&q=80"
-                      alt="Business consulting and management"
-                      className="bg-white/75 dark:hidden"
-                      width={1500}
-                      height={1240}
-                    />
-                    <Image
-                      src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1500&h=1240&fit=crop&q=80"
-                      alt="Business consulting and management"
-                      width={1500}
-                      height={1240}
-                      className="bg-black/75 not-dark:hidden"
+                      src="/management.jpg"
+                      alt="Führungs- und Managementunterstützung"
+                      width={4032}
+                      height={3024}
+                      className="object-cover aspect-2/1 lg:aspect-3/2"
                     />
                   </Screenshot>
                 }
@@ -194,20 +165,13 @@ export default function Page() {
                   </Link>
                 }
                 demo={
-                  <Screenshot wallpaper="blue" placement="top-right">
+                  <Screenshot wallpaper="brown" placement="top-right">
                     <Image
-                      src="https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?w=1500&h=1240&fit=crop&q=80"
-                      alt="Urban public transit and city mobility"
-                      className="bg-white/75 dark:hidden"
-                      width={1500}
-                      height={1240}
-                    />
-                    <Image
-                      src="https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?w=1500&h=1240&fit=crop&q=80"
-                      width={1500}
-                      height={1240}
-                      alt="Urban public transit and city mobility"
-                      className="bg-black/75 not-dark:hidden"
+                      src="/mobilitaetsentwicklung.jpg"
+                      alt="Mobilitätsentwicklung"
+                      width={1536}
+                      height={1024}
+                      className="object-cover aspect-2/1 lg:aspect-3/2"
                     />
                   </Screenshot>
                 }
@@ -244,6 +208,15 @@ export default function Page() {
                 <div>
                   <h3 className="text-xl font-semibold text-mist-950 dark:text-white">Geschäftsführer</h3>
                   <p className="mt-3">Werner Schurter, dipl. Ing. ETH/SIA, Verkehrsingenieur SVI</p>
+                  <div className="mt-4 w-full overflow-hidden rounded-sm outline -outline-offset-1 outline-black/5 dark:outline-white/5 sm:max-w-xs">
+                    <Image
+                      src="/werner-schurter.jpg"
+                      alt="Porträt von Werner Schurter"
+                      width={832}
+                      height={1216}
+                      className="h-auto w-full object-cover"
+                    />
+                  </div>
                 </div>
               </div>
 
@@ -277,8 +250,8 @@ export default function Page() {
                 <div>
                   <h3 className="text-xl font-semibold text-mist-950 dark:text-white">Frühere Tätigkeiten</h3>
                   <ul className="mt-2 list-disc space-y-2 pl-5">
-                    <li>SBB AG: Mitglied der Geschäftsleitung (Markt) Personenverkehr, 2016 - 2025</li>
-                    <li>SBB AG: Leiter Regionalverkehr, 2001 - 2019 / 2023 - 2025</li>
+                    <li>SBB AG: Mitglied der Geschäftsleitung (Markt) Personenverkehr / Leiter Regionalverkehr, 2016 - 2025</li>
+                    <li>SBB AG: Leiter Zürcher S-Bahn/Region Ost, 2001 - 2019 / 2023 - 2025</li>
                     <li>Verkehrsbetriebe Glattal VBG: Direktor, 1994 - 2001</li>
                     <li>Zürcher Verkehrsverbund ZVV: Verkehrsplaner, 1990 - 1994</li>
                   </ul>
