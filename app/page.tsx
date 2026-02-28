@@ -50,10 +50,10 @@ export default function Page() {
           demo={
             <Screenshot className="rounded-lg" wallpaper="blue" placement="bottom">
               <Image
-                src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=3440&h=1990&fit=crop&q=80"
-                alt="Modern train station with public transportation"
-                width={3440}
-                height={1990}
+                src={withBasePath('/hero.jpg')}
+                alt="Beispielbild für Verkehr und Mobilität"
+                width={1200}
+                height={550}
               />
             </Screenshot>
           }
