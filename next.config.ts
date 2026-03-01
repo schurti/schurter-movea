@@ -1,7 +1,14 @@
 import type { NextConfig } from "next";
 
-const repoName = process.env.GITHUB_REPOSITORY?.split("/")[1];
-const basePath = process.env.GITHUB_ACTIONS === "true" && repoName ? `/${repoName}` : "";
+const rawBasePath = process.env.BASE_PATH ?? "";
+const basePath =
+  rawBasePath === "/"
+    ? ""
+    : rawBasePath
+        ? rawBasePath.startsWith("/")
+          ? rawBasePath.replace(/\/+$/, "")
+          : `/${rawBasePath.replace(/\/+$/, "")}`
+        : "";
 
 const nextConfig: NextConfig = {
   output: "export",
@@ -13,12 +20,6 @@ const nextConfig: NextConfig = {
   },
   images: {
     unoptimized: true,
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "images.unsplash.com",
-      },
-    ],
   },
 };
 
