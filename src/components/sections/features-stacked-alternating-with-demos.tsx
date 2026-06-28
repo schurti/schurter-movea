@@ -28,7 +28,7 @@ export function Feature({
         </div>
         {cta}
       </div>
-      <div className="relative overflow-hidden rounded-sm lg:group-even:col-start-1 dark:after:absolute dark:after:inset-0 dark:after:rounded-sm dark:after:outline-1 dark:after:-outline-offset-1 dark:after:outline-white/10">
+      <div className="relative overflow-hidden rounded-sm lg:min-h-80 xl:min-h-0 lg:group-even:col-start-1 dark:after:absolute dark:after:inset-0 dark:after:rounded-sm dark:after:outline-1 dark:after:-outline-offset-1 dark:after:outline-white/10">
         {demo}
       </div>
     </div>

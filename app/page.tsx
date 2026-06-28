@@ -49,12 +49,17 @@ export default function Page() {
           }
           demo={
             <Screenshot className="rounded-lg" wallpaper="blue" placement="bottom">
-              <Image
-                src={withBasePath('/hero.jpg')}
-                alt="Beispielbild für Verkehr und Mobilität"
-                width={1200}
-                height={550}
-              />
+              <div className="relative">
+                <Image
+                  src={withBasePath('/hero.jpg')}
+                  alt="Beispielbild für Verkehr und Mobilität"
+                  width={1200}
+                  height={550}
+                />
+                <span className="absolute bottom-1 right-1 rounded bg-black/50 px-1.5 py-0.5 text-xs text-white/90">
+                  Quelle: Kanton Graubünden
+                </span>
+              </div>
             </Screenshot>
           }
         />
@@ -67,20 +72,20 @@ export default function Page() {
           }
           subheadline={
             <p>
-              Die Dienstleistungen von Schurter MOVEA GmbH umfassen die Erbringung von Beratungsdienstleistungen, insbesondere
-              im Zusammenhang mit Verkehrsanlagen, Mobilitätsfragen von Verkehrsunternehmen und Bestellern von
-              öffentlichen Verkehrsleistungen, sowie Führungs- und Managementunterstützung für Verwaltungen,
-              Unternehmen und Organisationen. Zusätzlich bietet die Firma die Ausübung von Verwaltungsratsmandaten an.
+                Die Dienstleistungen von Schurter MOVEA GmbH umfassen Führungs- und Managementunterstützung für Verwaltungen,
+                Unternehmen und Organisationen, die Erbringung von Beratungsdienstleistungen, insbesondere im Zusammenhang mit
+                Verkehrsanlagen und Mobilitätsfragen von Verkehrsunternehmen und Bestellern von öffentlichen Verkehrsleistungen.
+                Zusätzlich bietet die Firma die Ausübung von Verwaltungsratsmandaten an.
             </p>
           }
           features={
             <>
               <Feature
-                headline="Verkehrsanlagen"
+                headline="Führungs- und Managementunterstützung"
                 subheadline={
                   <p>
-                    Beratung im Zusammenhang mit Verkehrsanlagen und Infrastrukturprojekten. Ich unterstütze Sie bei
-                    Planung, Optimierung und Umsetzung.
+                    Führungs- und Managementunterstützung für Verwaltungen, Unternehmen und Organisationen im Bereich
+                    öffentlicher Verkehr. Ausübung von Verwaltungsratsmandaten.
                   </p>
                 }
                 cta={
@@ -89,13 +94,13 @@ export default function Page() {
                   </Link>
                 }
                 demo={
-                  <Screenshot wallpaper="blue" placement="bottom-right">
+                  <Screenshot wallpaper="green" placement="bottom-left">
                     <Image
-                      src={withBasePath('/verkehrsanlagen.jpg')}
-                      alt="Verkehrsanlagen"
-                      width={3264}
-                      height={2448}
-                      className="object-cover aspect-2/1 lg:aspect-3/2"
+                      src={withBasePath('/management.jpg')}
+                      alt="Führungs- und Managementunterstützung"
+                      width={4032}
+                      height={3024}
+                      className="object-cover aspect-2/1 lg:absolute lg:inset-0 lg:aspect-auto lg:h-full lg:w-full xl:static xl:aspect-3/2 xl:h-auto"
                     />
                   </Screenshot>
                 }
@@ -121,18 +126,18 @@ export default function Page() {
                       alt="Mobilitätsfragen"
                       width={2448}
                       height={3264}
-                      className="object-cover aspect-2/1 lg:aspect-3/2"
+                      className="object-cover aspect-2/1 lg:absolute lg:inset-0 lg:aspect-auto lg:h-full lg:w-full xl:static xl:aspect-3/2 xl:h-auto"
                     />
                   </Screenshot>
                 }
               />
 
               <Feature
-                headline="Führungs- und Managementunterstützung"
+                headline="Verkehrsanlagen"
                 subheadline={
                   <p>
-                    Führungs- und Managementunterstützung für Verwaltungen, Unternehmen und Organisationen im Bereich
-                    öffentlicher Verkehr. Ausübung von Verwaltungsratsmandaten.
+                    Beratung im Zusammenhang mit Verkehrsanlagen und Infrastrukturprojekten. Ich unterstütze Sie bei
+                    Planung, Optimierung und Umsetzung.
                   </p>
                 }
                 cta={
@@ -141,13 +146,13 @@ export default function Page() {
                   </Link>
                 }
                 demo={
-                  <Screenshot wallpaper="green" placement="bottom-left">
+                  <Screenshot wallpaper="blue" placement="bottom-right">
                     <Image
-                      src={withBasePath('/management.jpg')}
-                      alt="Führungs- und Managementunterstützung"
-                      width={4032}
-                      height={3024}
-                      className="object-cover aspect-2/1 lg:aspect-3/2"
+                      src={withBasePath('/verkehrsanlagen.jpg')}
+                      alt="Verkehrsanlagen"
+                      width={3264}
+                      height={2448}
+                      className="object-cover aspect-2/1 lg:absolute lg:inset-0 lg:aspect-auto lg:h-full lg:w-full xl:static xl:aspect-3/2 xl:h-auto"
                     />
                   </Screenshot>
                 }
@@ -172,7 +177,7 @@ export default function Page() {
                       alt="Mobilitätsentwicklung"
                       width={1536}
                       height={1024}
-                      className="object-cover aspect-2/1 lg:aspect-3/2"
+                      className="object-cover aspect-2/1 lg:absolute lg:inset-0 lg:aspect-auto lg:h-full lg:w-full xl:static xl:aspect-3/2 xl:h-auto"
                     />
                   </Screenshot>
                 }

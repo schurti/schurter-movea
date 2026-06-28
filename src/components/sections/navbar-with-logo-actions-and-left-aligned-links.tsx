@@ -15,7 +15,7 @@ export function NavbarLink({
     <a
       href={withBasePath(href)}
       className={clsx(
-        'group inline-flex items-center justify-between gap-2 text-3xl/10 font-medium text-mist-950 lg:text-sm/7 dark:text-white',
+        'group inline-flex items-center justify-between gap-2 whitespace-nowrap text-3xl/10 font-medium text-mist-950 lg:text-sm/7 dark:text-white',
         className,
       )}
       {...props}
